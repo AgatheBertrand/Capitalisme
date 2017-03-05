@@ -36,7 +36,21 @@ def fonctionDemande(carte,ville,pref,pop,prix):
 	"""Retourne le benefice en fonction des infos sur la ville"""
 	nb = "jaa"
 	return nb
-    
+"""    pour la fonction demande:
+qm(t)=Q(t-1)*(sqrt(Pk)+1.5)/(pm+1)           
+qk(t)=Q(t-1)*(sqrt(Pm)+1.5)/(pk+1)
+
+pk=pvk+w*(sqrt(S)/nk)
+pm=pvm+w*(sqrt(S)/nm)
+w poids du transport dans le cout total
+pvk=pvm prix de vente 
+
+Contrainte de revenu
+pk*qk+pm*qm=R
+R part de revenu par fast food=3% du revenu total
+Q=qk+qm (demande totale)
+donc Q(t)=qm(t)+((R-pm*qm(t))/pk)"""
+
 def profit(nbConso, prix,coutMenu,coutEntretien):
   	""""Retourne le profit du restaurant ce moi-ci"""
 	return nbConso*(prix-coutMenu) - coutEntretien
